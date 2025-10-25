@@ -65,4 +65,5 @@ qemu-system-x86_64 -accel kvm \
 		   -append "root=/dev/sda1 console=ttyS0" \
 		   -hda ${TD_IMG} \
 		   -serial stdio \
+		   -nic tap,ifname=tap-qemu,script=no \
 		   -pidfile /tmp/tdx-demo-td-pid.pid

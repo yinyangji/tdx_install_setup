@@ -103,12 +103,12 @@ grub_cmdline_nohibernate() {
 }
 
 install_kobuk() {
-    apt install --yes --allow-downgrades \
-        ${KERNEL_TYPE} \
-        qemu-system-x86 \
-        libvirt-daemon-system \
-        libvirt-clients \
-        ovmf \
+    #apt install --yes --allow-downgrades \
+    #    ${KERNEL_TYPE} \
+    #    qemu-system-x86 \
+    #    libvirt-daemon-system \
+    #    libvirt-clients \
+    #    ovmf \
 
     KERNEL_RELEASE=$(get_kernel_version "$KERNEL_TYPE")
     # select the right kernel for next boot
@@ -147,7 +147,7 @@ fi
 
 # preparation
 apt update
-apt install --yes software-properties-common gawk &> /dev/null
+#apt install --yes software-properties-common gawk &> /dev/null
 
 # cleanup
 # NB: '*' before kobuk to keep backward compatiblity to make sure

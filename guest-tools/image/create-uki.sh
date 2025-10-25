@@ -57,7 +57,7 @@ sudo cp /boot/initrd.img-${KERNEL_VER} initrd.img-${UBUNTU_VERSION}
 
 # copy the kernel
 sudo cp /boot/vmlinuz-${KERNEL_VER} ./vmlinuz-${UBUNTU_VERSION}
-sudo chmod a+rw vmlinuz-${KERNEL_VER}
+sudo chmod a+rw vmlinuz-${UBUNTU_VERSION}
 
 ukify build --linux=./vmlinuz-${UBUNTU_VERSION} \
       --cmdline "${KERNEL_CMDLINE}" \
